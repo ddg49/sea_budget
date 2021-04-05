@@ -1,8 +1,8 @@
+    //Main Variables:
     let endResult = document.getElementById('result');
     let last = document.getElementById('last');
     endResult.style.display = 'none';
     let lastText = document.getElementById('text');
-    
     let totalArray = [];
     let newArray = [];
     let finalArray;
@@ -15,20 +15,23 @@
     const discIncome = document.getElementById('discIncome');
     let totalExpenses;
     
-    //This function removes extra spaces but you must add this function to input elements
+    //This function removes extra spaces but you must add this function to input elements.
     function removeSpaces(string) {
         return string.split(' ').join('');
-       }
+    }
 
     function calculate() {
         const totalIncome = Number(betaIncome.value.replace(/,/g, '')); //We replace the commas with an empty string so that JS can do math with the value.
+        
         for(let i=0; i < totalArray.length; i++) {
             newArray.push(totalArray[i].value.replace(/,/g, '')); //variable 'i' holds the input element, so we add '.value' to the end of it to get what the user typed into the input box. Then we add that value to the newArray, giving us a list of numbers.
         }
+
         finalArray = newArray.map((el) => Number(el)); //finalArray turns the string values into numbers by using .map.
         newArray = []; //This cleans out the array so that the numbers don't double, see what happens if you get rid of this!
         finalArray = finalArray.reduce((a, b) => a + b, 0);
         totalExpenses = finalArray;
+
         if (totalExpenses.toLocaleString(undefined, {'minimumFractionDigits':2,'maximumFractionDigits':2}) == 'NaN' || totalIncome.toFixed(2) == 'NaN') {
             endResult.style.display = 'block';
             totalExpenseSpan.style.display = 'none';
@@ -69,18 +72,18 @@
         if (question == null) {
             return; //If the user hits cancel, then do nothing!
         } else {
-        const newExpense = document.createElement('input');
-        const label = document.createElement('label');
-        newExpense.setAttribute('type', 'text');
-        newExpense.setAttribute('class', 'newElement');
-        newExpense.setAttribute('onblur', "this.value=removeSpaces(this.value);")
-        label.innerHTML = question + "&nbsp";
-        const br = document.createElement('br');
-        document.getElementById('first').appendChild(label);
-        document.getElementById('first').appendChild(newExpense);
-        document.getElementById('first').appendChild(br);
-        totalArray.push(newExpense)
+            const newExpense = document.createElement('input');
+            const label = document.createElement('label');
+            newExpense.setAttribute('type', 'text');
+            newExpense.setAttribute('class', 'newElement');
+            newExpense.setAttribute('onblur', "this.value=removeSpaces(this.value);")
+            label.innerHTML = question + "&nbsp";
+            const br = document.createElement('br');
+            document.getElementById('first').appendChild(label);
+            document.getElementById('first').appendChild(newExpense);
+            document.getElementById('first').appendChild(br);
+            totalArray.push(newExpense);
+        }
     }
-}
 
     
