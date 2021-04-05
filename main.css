@@ -90,3 +90,11 @@ button {
     padding-right: 150px;
     }
 }
+
+a{
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightblue;
+}
