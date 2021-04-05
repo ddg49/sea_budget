@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP LINKS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="main.css">
+    <title>Sea Budget | Home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 px-0">
+                <header>
+                    <h1>$EA BUDGET</h1>
+                </header>
+            </div>
+        </div>
+        <!-- Nested Container -->
+        <div class="container px-0">
+            <div class="row">
+                <div class="col-md-6 py-1" id="home" onclick="window.open('index.html', '_self')">Home</div>
+                <div class="col-md-6 py-1" id="about" onclick="window.open('about.html', '_self')">About</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="margin: 0 auto;">
+                <section class="main">
+                    <div class="col-md-12" style="padding-top: 15px; border-bottom: 2px rgba(255, 255, 255, 0.253) solid; margin-bottom: 10px;"><label>Monthly Income</label> <input type='text' id='income' onblur="this.value=removeSpaces(this.value);"><br></div>
+                    <div class="col-md-12"><div id='first'></div></div> 
+                    <div class="col-md-12"><label>Add Expense&nbsp;</label><button onclick='expense()' type="button" class="btn btn-outline-info" role="button">+</button><br><br></div>      
+                    <div class="col-md-12"><button type="button" onclick='calculate()' class="btn btn-outline-success" role="button">Calculate</button></div><br>
+                    <div class="col-md-12" id="result">
+                        <p><span id='incomeResult'></span></p>
+                        <p><span id='expenseResult'></span></p>
+                        <p id='last' style="padding-top: 10px; border-top: 2px rgba(255, 255, 255, 0.253) solid; padding-bottom: 15px;"><span id='discIncome'></span></p>
+                        <div id='text' style="color: white; text-align: center; margin-bottom: 10px;"></div><br>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

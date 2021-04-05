@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+body {
+    background-color: rgb(4, 0, 54);
+    
+}
+
+header{
+    border-bottom: 1px solid darkblue;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,99,1) 35%, rgba(3,1,43,1) 100%);
+}
+
+/* Gradient */
+.container {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,99,1) 35%, rgba(3,1,43,1) 100%); 
+}
+
+/* Navigation Menu */
+.container h1 {
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+    color: white;
+}
+
+.container .col-md-6 {
+    text-align: center;
+    background-color: teal;
+    border-bottom: 1px white solid;
+    font-family: 'Merriweather', serif;
+    color: white;
+}
+
+.container .col-md-6:hover {
+    background-color: white;
+    color: teal
+}
+
+input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* border: none; */
+    border-radius: 5px;
+    outline: none;
+    width: 100px;
+}
+
+label {
+    color: white;
+}
+
+.main {
+    text-align: right;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+  
+/* This gets rid of the button outline */
+button {
+    box-shadow: none !important;
+}
+
+@media screen and (max-width: 268px) {
+    section.main {
+        text-align: center;
+    }
+}
+
+#result p {
+    color: white;
+}
+
+#full{
+    color: red;
+}
+
+@media screen and (min-width: 768px) {
+    article p {
+    padding-left: 110px;
+    padding-right: 110px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    article p {
+    padding-left: 150px;
+    padding-right: 150px;
+    }
+}
