@@ -12,6 +12,14 @@ header{
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,99,1) 35%, rgba(3,1,43,1) 100%);
 }
 
+#home:hover {
+    cursor: pointer;
+}
+
+#about:hover {
+    cursor: pointer;
+}
+
 /* Gradient */
 .container {
     background: rgb(2,0,36);
